@@ -1,6 +1,6 @@
 <style lang="stylus" scoped>
-@require '../styles/constants.styl'
-@require '../styles/fonts.styl'
+@import '../styles/constants.styl'
+@import '../styles/fonts.styl'
 
 .root-404
   width 100%

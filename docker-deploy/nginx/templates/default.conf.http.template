@@ -1,0 +1,8 @@
+server {
+  listen 80;
+  listen [::]:80;
+  server_name ${DOMAIN_URL};
+
+  include /etc/nginx/conf.d/locations/http/*.conf;
+  include /etc/nginx/conf.d/locations/https/*.conf;
+}

@@ -23,8 +23,8 @@ import {
   MOTION_SPEED_RANGE_MIN,
   MOTION_SPEED_RANGE_MAX, MOTION_OFFSET_RANGE_MAX,
 } from "~/src_3d/constants";
-import TEXTURE_NORMAL_MAP_ROUGH_MATERIAL_URL from '/res/images/normal_maps/rough_material.jpg';
-import TEXTURE_ENV_MAP_EMPTY_WAREHOUSE_URL from '/res/images/environment_maps/empty_warehouse.hdr';
+import TEXTURE_NORMAL_MAP_ROUGH_MATERIAL_URL from '/static/images/normal_maps/rough_material.jpg';
+import TEXTURE_ENV_MAP_EMPTY_WAREHOUSE_URL from '/static/images/environment_maps/empty_warehouse.hdr';
 import {RGBELoader} from 'three/examples/jsm/loaders/RGBELoader';
 import {
   computeUVs,

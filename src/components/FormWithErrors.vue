@@ -1,7 +1,7 @@
 <style lang="stylus" scoped>
-@require '../styles/buttons.styl'
-@require '../styles/constants.styl'
-@require '../styles/fonts.styl'
+@import '../styles/buttons.styl'
+@import '../styles/constants.styl'
+@import '../styles/fonts.styl'
 
 border-color = colorText1
 input-border = 2px solid border-color

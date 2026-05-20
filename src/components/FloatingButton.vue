@@ -1,6 +1,6 @@
 <style lang="stylus" scoped>
-@require '../styles/constants.styl'
-@require '../styles/utils.styl'
+@import '../styles/constants.styl'
+@import '../styles/utils.styl'
 
 float-button-height = 50px
 image-width = 30px

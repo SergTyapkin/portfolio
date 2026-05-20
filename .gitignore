@@ -9,6 +9,9 @@ lerna-debug.log*
 yarn.lock
 package-lock.json
 
+# Certbot certificates dir
+certbot
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -76,8 +79,11 @@ web_modules/
 
 # dotenv environment variable files
 .env
+.env.development
 .env.development.local
+.env.test
 .env.test.local
+.env.production
 .env.production.local
 .env.local
 
@@ -87,7 +93,7 @@ web_modules/
 
 # Next.js build output
 .next
-out
+docs
 
 # Nuxt.js build / generate output
 .nuxt
@@ -131,4 +137,11 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# JetBrains project files
 .idea
+
+# Generates dynamically:
+docker-deploy/docker-compose.yaml
+
+# Jest tests reports
+test-report.html

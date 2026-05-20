@@ -18,11 +18,16 @@
 #echo "" && \
 #echo 'Add this public rsa key to Deploy keys in your github directory: ' && \
 #sudo cat /home/github/.ssh/id_rsa.pub
-ssh-keygen -f /tmp/tmp_key
-sudo mkdir -p ~/.ssh
-sudo cat /tmp/tmp_key.pub | sudo tee -a ~/.ssh/authorized_keys > /dev/null
-echo ''
-echo 'Add this private rsa key secret deploy environment variables to SSH_DEPLOY_KEY on your github repo: '
-echo '[To see key press Enter...]'
-read ENTER
-sudo less /tmp/tmp_key
+
+echo "Now we generate new SSH key with name \"${key_name}\" and adds it into ~/.ssh/authorized_keys to access github actions on this computer" &&
+echo '[press Enter...]' &&
+read ENTER &&
+key_name="$(. "./.env"; eval "echo \${VITE_DEPLOY_HOSTNAME}" | tr -dc "a-zA-Z0-9_.-")" &&
+ssh-keygen -f "/tmp/${key_name}" &&
+sudo mkdir -p ~/.ssh &&
+sudo cat "/tmp/${key_name}.pub" | sudo tee -a ~/.ssh/authorized_keys > /dev/null &&
+echo '' &&
+echo 'Add this private rsa key into secret deploy environment variables to SSH_DEPLOY_KEY on your github repo: ' &&
+echo '[To see key press Enter...]' &&
+read ENTER &&
+sudo less "/tmp/${key_name}"

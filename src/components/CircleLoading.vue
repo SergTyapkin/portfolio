@@ -1,5 +1,5 @@
 <style lang="stylus" scoped>
-@require '../styles/constants.styl'
+@import '../styles/constants.styl'
 
 .circle-loading
   //width 60px //in props

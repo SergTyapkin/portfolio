@@ -1,0 +1,14 @@
+{
+  "testMatch": ["**/*.(spec|test).?(m)(js|ts)?(x)"],
+  "testEnvironment": "node",
+  "reporters": ["default", "jest-html-reporter"],
+  "moduleFileExtensions": ["js", "ts", "mjs", "mts"],
+  "transform": {
+    "^.+\\.m?(t|j)sx?$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "^~/(.*)": "<rootDir>/src/$1",
+    "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/types/image-imports.d.ts",
+    "\\.(css|less|styl|scss|sass)$": "<rootDir>/src/types/image-imports.d.ts"
+  }
+}
